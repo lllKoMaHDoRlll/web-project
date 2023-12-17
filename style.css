@@ -294,3 +294,76 @@ header {
 #extra-option-outter > a {
     color: rgb(27, 4, 110);
 }
+
+#latest-cases {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+#latest-cases-cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5%;
+}
+
+.case {
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.case.type1 {
+    width: 33%;
+}
+
+.case.type2 {
+    width: 66%;
+}
+
+.case-photo {
+    height: 100%;
+    z-index: -1;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.case-photo > img {
+    
+    z-index: inherit;
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.case-content {
+    position: relative;
+}
+
+.case-content-inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+}
+
+.case-title {
+    font-size: 24pt;
+    width: 100%;
+}
+
+.case-date > span {
+    font-size: 10pt;
+    color: #AAA;
+    font-weight: 700;
+}
