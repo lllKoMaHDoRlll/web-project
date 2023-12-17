@@ -70,6 +70,20 @@ header {
     margin-right: 30dvw;
 }
 
+#nav-links > li::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 2px;
+    background-color: #F00;
+    transition: .2s;
+}
+
+#nav-links > li:hover::after {
+    width: 100%;
+}
+
 #nav-links > li > a {
     text-decoration: none;
 }
