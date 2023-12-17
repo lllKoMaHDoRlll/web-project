@@ -299,7 +299,7 @@ header {
     margin: 50px;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
 }
 
@@ -333,9 +333,7 @@ header {
     overflow: hidden;
 }
 
-
 .case-photo > img {
-    
     z-index: inherit;
     position: relative;
     width: 100%;
@@ -366,4 +364,11 @@ header {
     font-size: 10pt;
     color: #AAA;
     font-weight: 700;
+}
+
+#show-more-cases {
+    padding: 20px 70px;
+    background-color: #FFF;
+    border-radius: 3px;
+    border: 1px solid #999;
 }
