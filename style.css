@@ -303,8 +303,6 @@ header {
     padding-right: 8px;
 }
 
-
-
 .support-service-icon>img{
     width: 60px;
     height: 60px;
@@ -315,6 +313,43 @@ header {
     display: flex;
     flex-direction: row-reverse;
     padding-bottom: 0;
+}
+
+#exp-image-outter>img{
+    width: 600px;
+    height: 550px;
+}
+
+#company-experience{
+    display: flex;
+    align-items: center;
+}
+
+#exp-header-outter{
+    font-size: 30pt;
+    padding: 15px;
+}
+
+#exp-features{
+    width: 500px;
+    height: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+} 
+
+.exp-feature{
+    padding: 10px;
+
+}
+
+.exp-feature::before{
+    content: "";
+    background-color: red;
+    height: 70px;
+    width: 3px;
+    display: inline-block;
+    transform: translateX(-15px);
+    position:absolute; 
 }
 
 #thumbnail-achievments {
