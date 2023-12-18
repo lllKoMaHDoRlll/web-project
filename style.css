@@ -282,23 +282,24 @@ header {
     color: #444;
 }
 
+#company-support {
+    padding: 5%;
+}
+
 #company-support-header{
-    padding: 20px;
+    font-size: 20pt;
 }
 
 #support-services{
-    content: " ";
     display: grid;
-    grid-template-columns: repeat(auto-fill, 225px);
+    grid-template-columns: 1fr;
     width: 100%;
-    max-width: 1000px; 
     justify-content: center;
     justify-items: center; 
-    column-gap: 30px;
-    row-gap: 40px; 
+    column-gap: 2%;
+    row-gap: .7rem; 
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 100px;
+    padding-top: 3%;
 }
 
 .support-service{
@@ -942,6 +943,10 @@ footer > img {
     }
 
     #services-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #support-services {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
