@@ -240,29 +240,46 @@ header {
 #services-thumbnail{
     display: flex;
     flex-direction: column;
+    padding: 3% 5%;
+    padding-bottom: 0;
+    gap: 1rem;
 }
 
-#services-thumbnail{
-    padding: 20px;
+#services-thumbnail-header-outter {
+    font-size: 20pt;
+    width: 100%;
+}
+
+#services-thumbnail-text-outter {
+    color: #424242;
+    width: 100%;
 }
 
 #services-content{
-    content: " ";
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 1000px; 
     justify-content: center;
-    column-gap: 30px;
-    row-gap: 40px; 
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    column-gap: 5%;
+    row-gap: 2rem;
+    padding: 3% 5%;
+    
+}
+
+.service-card {
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #EEE;
+    border-radius: 5px;
+    padding: 5%;
 }
 
 .service-card-header>img{
     width: 80px;
     height: 80px;
+}
+
+.service-card-body > p {
+    color: #444;
 }
 
 #company-support-header{
@@ -913,6 +930,15 @@ footer > img {
         padding: 5% 0 5% 0;
         justify-content: unset;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #services-thumbnail-header-outter {
+        width: 50%;
+    }
+
+    #services-thumbnail-text-outter {
+        color: #424242;
+        width: 40%;
     }
 
     #services-content {
