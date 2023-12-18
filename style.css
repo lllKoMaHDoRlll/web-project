@@ -161,6 +161,53 @@ header {
     height: 80px;
 }
 
+#support-services{
+    content: " ";
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center; 
+    column-gap: 30px;
+    row-gap: 40px; 
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.support-service{
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.3);
+    padding-left: 8px;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.support-service-num{
+    padding-bottom: 5px;
+    color:#999;
+}
+
+.support-service-header, .support-service-body{
+    padding-right: 8px;
+}
+
+
+
+.support-service-icon>img{
+    width: 60px;
+    height: 60px;
+    
+}
+
+.support-service-icon{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 0;
+}
+
 #thumbnail-achievments {
     width: 50%;
     background-color: transparent;
