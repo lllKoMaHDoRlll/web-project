@@ -12,12 +12,12 @@ var reviewsList = [
     {
         "text": "What impressed me most about Coffee & Cats is their dedication to the well-being of the cats. The staff is attentive and knowledgeable, ensuring that both guests and feline friends coexist harmoniously. The hygiene standards are impeccable, and it's evident that the cats are happy, healthy, and well-cared-for members of the cafe community.",
         "author": "",
-        "logo_format": "png"
+        "logo_format": "jpg"
     },
     {
         "text": "Coffee & Cats is not just a coffee shop; it's a haven for cat enthusiasts and coffee lovers alike. My recent visit to this delightful establishment left me with a profound sense of joy and relaxation, and I can't wait to share my wonderful experience.",
         "author": "",
-        "logo_format": "png"
+        "logo_format": "webp"
     }
 ]
 
