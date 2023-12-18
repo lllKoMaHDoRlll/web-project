@@ -886,6 +886,7 @@ footer > img {
 
     .option {
         max-width: 16dvw;
+        min-width: 210px;
     }
 
     .main-option {
