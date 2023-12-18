@@ -56,4 +56,36 @@ document.addEventListener("DOMContentLoaded", () => {
         currentPageIndex %= reviewsList.length;
         loadReview(currentPageIndex);
     });
+
+    var clientsSlider1 = new Splide( '#clients-gallery-1', {
+        type: "loop",
+        width: "140%",
+        perMove: 1,
+        perPage: 14,
+        gap: "1em",
+        autoWidth: true,
+        arrows: false,
+        pagination: false,
+        drag: false,
+        autoplay: true,
+        interval: 4000,
+        speed: 1200,
+    });
+    clientsSlider1.mount();
+
+    var clientsSlider2 = new Splide( '#clients-gallery-2', {
+        type: "loop",
+        width: "140%",
+        perMove: 1,
+        perPage: 16,
+        gap: "1em",
+        autoWidth: true,
+        arrows: false,
+        pagination: false,
+        drag: false,
+        autoplay: true,
+        interval: 5000,
+        speed: 1200,
+    });
+    clientsSlider2.mount();
 });

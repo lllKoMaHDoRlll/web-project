@@ -489,3 +489,35 @@ header {
     font-size: 30pt;
     cursor: pointer;
 }
+
+#company-clients {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 5rem;
+}
+
+#company-clients-header-outter {
+    font-size: 26pt;
+    padding: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#company-clients-body-outter {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+#company-clients-gallery-2 {
+    width: 140%;
+    transform: translateX(-7%);
+}
+
+
+.splide__slide {
+    border: 1px solid #DDD;
+    border-radius: 5px;
+}
