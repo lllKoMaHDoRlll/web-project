@@ -152,6 +152,22 @@ document.addEventListener("DOMContentLoaded", () => {
         loadReview(currentPageIndex);
     });
 
+    var dropoutMenuButtonEl = document.getElementById("nav-links-dropout-button-inner");
+    var dropoutEl = document.getElementById("dropout-menu");
+    dropoutMenuButtonEl.addEventListener("click", () => {
+        dropoutEl.style.display = "flex";
+    });
+
+    document.addEventListener("click", (event) => {
+        if (event.target != dropoutMenuButtonEl) {
+            dropoutEl.style.display = "none";
+        }        
+    });
+
+    dropoutMenuButtonEl.addEventListener("focusout", () => {
+        dropoutEl.style.display = "none";
+    });
+
     var clientsSlider1 = new Splide( '#clients-gallery-1', {
         type: "loop",
         width: "140%",

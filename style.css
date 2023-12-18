@@ -88,12 +88,53 @@ header {
     text-decoration: none;
 }
 
+#nav-links-dropout-button {
+    position: relative;
+    cursor: pointer;
+}
+
+#dropout-menu {
+    border-radius: 5px;
+    padding: 3px 0;
+    position: absolute;
+    display: none;
+    top: 20pt;
+    left: 0;
+    background-color: #f04d35;
+    z-index: 5;
+    width: 100%;
+}
+
+#dropout-menu > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    width: 100%;
+}
+
+#dropout-menu > ul > li {
+    color: #FFF;
+    width: 100%;
+    padding: 5%;
+}
+
+#dropout-menu > ul > li > a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#dropout-menu > ul > li:hover {
+    background-color: #d13018;
+
+}
+
 #contact-tel > a {
     text-decoration: none;
 }
 
 #logo-outter > img {
-    height: 5dvh;
+    height: 6dvh;
     mix-blend-mode: screen;
     filter: invert(1);
 }
