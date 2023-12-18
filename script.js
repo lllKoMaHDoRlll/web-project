@@ -181,6 +181,11 @@ document.addEventListener("DOMContentLoaded", () => {
         autoplay: true,
         interval: 4000,
         speed: 1200,
+        breakpoints: {
+            780: {
+                height: "100px",
+            }
+        }
     });
     clientsSlider1.mount();
 

@@ -54,17 +54,21 @@ html {
 }
 
 header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 100dvw;
     justify-content: space-evenly;
     align-items: center;
-    background-color: transparent;
+    background-color: #424242;
+    z-index: 100;
 }
 
 #nav-links {
     list-style-type: none;
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 35dvw;
     margin-right: 30dvw;
@@ -129,8 +133,16 @@ header {
 
 }
 
+#contact-tel {
+    display: none;
+}
+
 #contact-tel > a {
     text-decoration: none;
+}
+
+#lang-switcher-outter {
+    display: none;
 }
 
 #logo-outter > img {
@@ -141,19 +153,22 @@ header {
 
 #company-thumbnail {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 5%;
     width: 100%;
     padding: 2%;
 }
 
 #thumbnail-body {
-    width: 50%;
+    width: 100%;
     background-color: transparent;
     padding: 5%;
     display: flex;
     gap: 30px;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 #company-thumbnail-header > h1 {
@@ -186,15 +201,14 @@ header {
 #services-content{
     content: " ";
     display: grid;
-    grid-template-columns: repeat(auto-fill, 225px);
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     max-width: 1000px; 
     justify-content: center;
-    justify-items: center; 
     column-gap: 30px;
     row-gap: 40px; 
     margin: 0 auto;
-    padding: 5px;
+    padding: 5%;
 }
 
 .service-card-header>img{
@@ -203,17 +217,16 @@ header {
 }
 
 #thumbnail-achievments {
-    width: 50%;
+    width: 100%;
     background-color: transparent;
-    padding: 5% 0 5% 0;
-}
-
-#thumbnail-achievments {
+    padding: 5%;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-content: space-evenly;
     gap: 20px;
 }
+
 
 .thumbnail-achievment {
     padding: 10px;
@@ -257,6 +270,7 @@ header {
 
 #options-outter {
     display: flex;
+    flex-direction: column;
     width: 100%;
     padding: 2% 10% 2% 10%;
     justify-content: center;
@@ -270,15 +284,7 @@ header {
     border-radius: 10px;
     padding: 2rem;
     width: 100%;
-    max-width: 16dvw;
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.3);
-}
-
-.main-option {
-    z-index: 2;
-    background-color: #FFF;
-    /* transform: perspective(100px) translateZ(5px); */
-    transform: scale(1.05);
 }
 
 .option-thumbnail-outter {
@@ -349,7 +355,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45%;
+    padding: 5%;
+    text-align: center;
 }
 
 #extra-option-outter > p {
@@ -371,7 +378,8 @@ header {
 #latest-cases-cards {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
     gap: .5%;
 }
 
@@ -381,14 +389,6 @@ header {
     border-radius: 10px;
     padding: 5px;
     margin-bottom: 10px;
-}
-
-.case.type1 {
-    width: 33%;
-}
-
-.case.type2 {
-    width: 66%;
 }
 
 .case-photo {
@@ -421,7 +421,7 @@ header {
 }
 
 .case-title {
-    font-size: 16pt;
+    font-size: 12pt;
     width: 100%;
 }
 
@@ -429,6 +429,10 @@ header {
     font-size: 10pt;
     color: #AAA;
     font-weight: 700;
+}
+
+.case-text {
+    font-size: 10pt;
 }
 
 #show-more-cases {
@@ -442,22 +446,22 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8rem;
+    gap: 3rem;
 }
 
 #reviews-tab {
     position: relative;
     box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.3);
-    width: 75%;
+    width: 90%;
     display: flex;
+    flex-direction: column;
     border: 1px solid #EEE;
-    padding: 5%;
-    padding-top: 3%;
-    padding-right: 0;
+    padding: 3%;
     justify-content: space-between;
     border-radius: 5px;
     transition: .7s;
     background-color: #FFF;
+    align-items: center;
 }
 
 #reviews-tab::before {
@@ -465,7 +469,7 @@ header {
     position: absolute;
     width: 80%;
     height: 100px;
-    top: -5%;
+    top: -3%;
     left: 10%;
     right: 0;
     background-color: rgba(255, 255, 255, 0.8);
@@ -480,7 +484,7 @@ header {
     position: absolute;
     width: 60%;
     height: 100px;
-    top: -10%;
+    top: -5%;
     left: 20%;
     border-radius: 5px;
     border: 1px solid #EEE;
@@ -491,22 +495,22 @@ header {
 }
 
 #reviews-tab-content {
-    width: 70%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    border-right: 1px solid #999;
-    padding-right: 3rem;
+    gap: 1rem;
+    border-bottom: 1px solid #999;
+    padding-bottom: 1rem;
 }
 
 #review-logo > img {
-    width: 25%;
+    width: 50%;
 }
 
 #review-text > p {
     font-weight: 700;
     text-decoration: underline;
-    font-size: 18pt;
+    font-size: 14pt;
 }
 
 #review-author > p {
@@ -515,6 +519,7 @@ header {
 }
 
 #reviews-tab-pagination {
+    margin-top: 1rem;
     width: 30%;
     display: flex;
     align-items: center;
@@ -549,8 +554,8 @@ header {
 
 #company-clients-body-outter {
     margin: auto;
-    width: 50%;
-    text-align: center;
+    width: 80%;
+    text-align: left;
 }
 
 #company-clients-gallery-2 {
@@ -563,26 +568,31 @@ header {
     border-radius: 5px;
 }
 
+.splide__slide > img {
+    height: 100px;
+}
+
 #company-request {
-    margin-top: 8rem;
+    margin-top: 2rem;
     background-color: #0c0e1a;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 5% 10%;
 }
 
 #company-request-content-outter {
-    width: 35%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
 
 #company-request-header-outter {
-    font-size: 30pt;
+    font-size: 20pt;
 }
 
 #company-request-body-outter {
-    margin-bottom: 10rem;
+    margin-bottom: 3rem;
     font-size: 14pt;
     color: #AAA;
 }
@@ -594,7 +604,7 @@ header {
 }
 
 #request-phone {
-    font-size: 26pt;
+    font-size: 16pt;
     font-weight: 700;
 }
 
@@ -614,11 +624,12 @@ header {
 }
 
 #request-mail > a {
-    font-size: 20pt;
+    font-size: 16pt;
+    margin-bottom: 1rem;
 }
 
 #company-request-form-outter {
-    width: 35%;
+    width: 100%;
 }
 
 #feedback-form {
@@ -677,7 +688,8 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
+    padding-bottom: 60px;
     overflow: hidden;
 }
 
@@ -687,6 +699,7 @@ footer > p {
 }
 
 footer > img {
+    display: none;
     position: absolute;
     mix-blend-mode: screen;
     filter: invert(1);
@@ -694,4 +707,189 @@ footer > img {
     right: 5%;
     height: 70%;
     transform: scale(2.2);
+}
+
+
+@media screen and (width >= 780px) {
+    header {
+        position: static;
+        bottom: unset;
+        left: unset;
+        width: 100%;
+        z-index: unset;
+        background-color: transparent;
+    }
+
+    #nav-links {
+        display: flex;
+    }
+
+    #contact-tel {
+        display: unset;
+    }
+
+    #lang-switcher-outter {
+        display: unset;
+    }
+
+    #company-thumbnail {
+        flex-direction: row;
+        align-items: unset;
+    }
+
+    #thumbnail-body {
+        width: 50%;
+        align-items: unset;
+    }
+
+    #thumbnail-achievments {
+        width: 50%;
+        padding: 5% 0 5% 0;
+        justify-content: unset;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #services-content {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #options-outter {
+        flex-direction: row;
+    }
+
+    .option {
+        max-width: 16dvw;
+    }
+
+    .main-option {
+        transform: scale(1.05);
+        z-index: 2;
+        background-color: #FFF;
+    }
+
+    #extra-option-outter {
+        width: 45%;
+        padding: 0;
+    }
+
+    #latest-cases-cards {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .case.type1 {
+        width: 33%;
+    }
+    
+    .case.type2 {
+        width: 66%;
+    }
+
+    .case-title {
+        font-size: 16pt;
+    }
+    
+    .case-text {
+        font-size: unset;
+    }
+
+    #company-reviews {
+        gap: 8rem;
+    }
+
+    #reviews-tab {
+        flex-direction: row;
+        align-items: unset;
+        padding-right: 0;
+    }
+
+    #reviews-tab-content {
+        border-right: 1px solid #999;
+        border-bottom: 0;
+        padding: 5%;
+        padding-top: 3%;
+        padding-right: 0;
+    }
+
+    #reviews-tab::before {
+        top: -5%;
+        left: 10%;
+        right: 0;
+    }
+    
+    #reviews-tab::after {
+        top: -10%;
+        left: 20%;
+    }
+    
+    #reviews-tab-content {
+        width: 70%;
+        gap: 2rem;
+        padding-bottom: 3rem;
+    }
+
+    #review-logo > img {
+        width: 25%;
+    }
+
+    #review-text > p {
+        font-size: 18pt;
+    }
+
+    #reviews-tab-pagination {
+        margin-top: 0;
+    }
+
+    #company-clients-body-outter {
+        text-align: center;
+        width: 50%;
+    }
+
+    .splide__slide > img {
+        height: unset;
+    }
+
+    #company-request {
+        margin-top: 8rem;
+        flex-direction: row;
+    }
+
+    #company-request-content-outter {
+        width: 35%;
+    }
+
+    #company-request-header-outter {
+        font-size: 30pt;
+    }
+
+    #company-request-body-outter {
+        margin-bottom: 10rem;
+        font-size: 14pt;
+        color: #AAA;
+    }
+    
+    #request-phone {
+        font-size: 26pt;
+    }
+    
+    #request-mail > a {
+        font-size: 20pt;
+        margin-bottom: 0;
+    }
+
+    #company-request-form-outter {
+        width: 35%;
+    }
+
+    footer > img {
+        display: static;
+    }
+
+    footer {
+        padding: 2rem 4rem;
+    }
+    
+    footer > p {
+        font-size: 10pt;
+    }
 }
