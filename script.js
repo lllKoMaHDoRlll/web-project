@@ -21,8 +21,103 @@ var reviewsList = [
     }
 ]
 
+function sendFormData(event) {
+    console.log("sending form");
+    event.preventDefault();
+    if (!isFormValid()) return false;
+
+    let request = new XMLHttpRequest();
+    request.open("POST", "https://formcarry.com/s/jfnPbjBfup");
+    request.setRequestHeader("ACCEPT", "application/json");
+
+    let data = new FormData();
+    
+    let inputEls = document.getElementsByClassName("local-save");
+    [...inputEls].forEach(inputEl => {
+        data.append(inputEl.id, inputEl.value);
+    });
+    
+    request.onreadystatechange = () => {
+        if (request.readyState === XMLHttpRequest.DONE) {
+          const status = request.status;
+          if (status === 0 || (status >= 200 && status < 400)) {
+            alert("Form was sended successfully.");
+          } else {
+            alert(`An error was occured while sending form. Error code: ${status}.`);
+          }
+        }
+      };
+
+    request.send(data);
+    clearInputFields(inputEls);
+    closeModal();
+}
+
+function isFormValid() {
+    let nameEl = document.getElementById("user-name");
+    if (nameEl.value == "") {
+        alert("Please, enter name.");
+        return false;
+    }
+
+    let emailEl = document.getElementById("user-email");
+    if (emailEl.value != "" && !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(emailEl.value)) {
+        alert("Incorrect Email format.");
+        return false;
+    }
+
+    let phoneEl = document.getElementById("user-phone");
+    if (phoneEl.value != "" && !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/g.test(phoneEl.value)) {
+        alert("Incorrect Phone format.");
+        return false;
+    }
+
+
+    let messageEl = document.getElementById("user-message");
+    if (messageEl.value == "") {
+        alert("Please, enter message.");
+        return false;
+    }
+
+    let acceptionEl = document.getElementById("user-acception");
+    if (!acceptionEl.checked) {
+        alert("Accept Politics privacy.");
+        return false;
+    }
+
+    return true;
+}
+
+function clearInputFields(inputEls) {
+    [...inputEls].forEach(inputEl => {
+        inputEl.value = "";
+        localStorage.setItem(inputEl.id, "");
+    });
+    console.log(localStorage);
+}
+
+function loadInput(inputEl) {
+    inputEl.value = localStorage.getItem(inputEl.id);
+}
+
+function saveInput(event) {
+    localStorage.setItem(event.target.id, event.target.value);
+}
 
 document.addEventListener("DOMContentLoaded", () => {
+    let inputEls = document.getElementsByClassName("local-save");
+
+    [...inputEls].forEach(inputEl => {
+        loadInput(inputEl);
+    });
+    
+    [...inputEls].forEach(inputEl => {
+        inputEl.addEventListener("input", saveInput);
+    });
+
+    let submitButton = document.getElementById("submit-button");
+    submitButton.addEventListener("click", sendFormData);
+
     function loadReview(index) {
         reviewsTextEl.innerHTML = reviewsList[currentPageIndex].text;
         reviewsAuthorEl.innerHTML = reviewsList[currentPageIndex].author;

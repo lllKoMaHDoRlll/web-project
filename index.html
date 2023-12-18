@@ -547,7 +547,7 @@
     <section id="company-request">
         <div id="company-request-content-outter">
             <div id="company-request-header-outter">
-                <h1>Leave request</h1>
+                <h1 class="text-light">Leave request</h1>
             </div>
             <div id="company-request-body-outter">
                 <p>
@@ -556,21 +556,47 @@
             </div>
             <div id="company-request-contacts">
                 <div id="request-phone">
-
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+79000000000" class="text-light">8-800-000-00-00</a>
                 </div>
                 <div id="request-mail">
-
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:example@mail.com" class="text-light">example@mail.com</a>
                 </div>
             </div>
         </div>
         <div id="company-request-form-outter">
-            <form action=""></form>
+            <form id="feedback-form" class="ajaxForm" accept-charset="UTF-8">
+                <div id="form-name" class="input-outter">
+                    <input type="text" name="user-name" id="user-name" class="local-save" required placeholder="Your name">
+                </div>
+                <div id="form-phone" class="input-outter">
+                    <input type="tel" name="user-phone" id="user-phone" class="local-save" placeholder="Your phone">
+                </div>
+                <div id="form-email" class="input-outter">
+                    <input type="email" name="user-email" id="user-email" class="local-save" placeholder="Your email">
+                </div>
+                <div id="form-message" class="input-outter">
+                    <textarea name="user-message" id="user-message" rows="5" class="local-save" required placeholder="Your message"></textarea>
+                </div>
+                <div id="form-acception">
+                    <input type="checkbox" name="user-acception" id="user-acception" class="local-save" required checked>
+                    <label for="user-acception">I accept politics privacy.</label>
+                </div>
+                <div id="submit-button-outter">
+                    <button type="button" id="submit-button">Submit</button>
+                </div>
+            </form>
         </div>
     </section>
     <footer>
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis accusantium ipsa nemo et aut earum quia. Accusamus provident necessitatibus, assumenda, cumque ducimus velit iste quaerat sit obcaecati a consequatur deleniti?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa, totam ad magni itaque perspiciatis soluta!
         </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, atque!
+        </p>
+        <img src="./media/images/cat_logo.png" alt="Logo">
     </footer>
 </body>
 </html>
