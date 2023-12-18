@@ -618,28 +618,38 @@ header {
     border: 1px solid #999;
 }
 
+#company-team {
+    padding-bottom: 3rem;
+}
+
 #company-team-header-outter{
     display: flex;
     justify-content: center;
+    font-size: 20pt;
 }
 
 #company-employees{
-    content: " ";
     display: grid;
-    grid-template-columns: repeat(auto-fill, 225px);
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    max-width: 800px; 
     justify-content: center;
-    justify-items: center; 
-    column-gap: 30px;
-    row-gap: 40px; 
+    align-items: start;
+    column-gap: 1rem;
+    row-gap: 1rem; 
     margin: 0 auto;
     padding: 20px;
 }
 
+.employee-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .employee-card-img>img{
-    width: 190px;
-    height: 250px;
+    width: 130px;
+    height: 170px;
 }
 
 #company-reviews {
@@ -1032,6 +1042,15 @@ footer > img {
     
     .case-text {
         font-size: unset;
+    }
+
+    #company-employees {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .employee-card-img>img{
+        width: 190px;
+        height: 250px;
     }
 
     #company-reviews {
