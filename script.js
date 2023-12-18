@@ -154,18 +154,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     var dropoutMenuButtonEl = document.getElementById("nav-links-dropout-button-inner");
     var dropoutEl = document.getElementById("dropout-menu");
+
     dropoutMenuButtonEl.addEventListener("click", () => {
         dropoutEl.style.display = "flex";
+    });
+
+    
+
+    var MobileMenuButtonEl = document.getElementById("menu-mobile-icon");
+    var MobileMenuEl = document.getElementById("nav-links-menu-mobile-content");
+    
+    MobileMenuButtonEl.addEventListener("click", () => {
+        MobileMenuEl.style.display = "unset";
+        MobileMenuEl.style.height = "unset";
+        console.log(1);
     });
 
     document.addEventListener("click", (event) => {
         if (event.target != dropoutMenuButtonEl) {
             dropoutEl.style.display = "none";
-        }        
-    });
-
-    dropoutMenuButtonEl.addEventListener("focusout", () => {
-        dropoutEl.style.display = "none";
+        }
+        if (event.target != MobileMenuButtonEl) {
+            MobileMenuEl.style.display = "none";
+            MobileMenuEl.style.height = "0";
+            console.log(event.target);
+        }       
     });
 
     var clientsSlider1 = new Splide( '#clients-gallery-1', {

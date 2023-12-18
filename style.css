@@ -60,10 +60,11 @@ header {
     display: flex;
     flex-direction: row;
     width: 100dvw;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: #424242;
     z-index: 100;
+    padding: 0 5%;
 }
 
 #nav-links {
@@ -149,6 +150,45 @@ header {
     height: 6dvh;
     mix-blend-mode: screen;
     filter: invert(1);
+}
+
+#nav-links-menu-mobile {
+    position: relative;
+}
+
+#menu-mobile-icon-outter {
+    padding: 10px;
+}
+
+#menu-mobile-icon {
+    font-size: 18pt;
+}
+
+#nav-links-menu-mobile-content {
+    width: 90dvw;
+    padding: 10%;
+    position: absolute;
+    height: 0px;
+    display: none;
+    bottom: max(5dvh, calc(18pt + 20px));
+    right: 0;
+    background-color: #424242;
+}
+
+#nav-links-menu-mobile-content > ul {
+    list-style: none;
+}
+
+#nav-links-menu-mobile-content > ul > li:hover {
+    background-color: #333;
+}
+
+#nav-links-menu-mobile-content > ul > li > a {
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: inline-block;
 }
 
 #company-thumbnail {
@@ -799,6 +839,12 @@ footer > img {
         width: 100%;
         z-index: unset;
         background-color: transparent;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    #nav-links-menu-mobile {
+        display: none;
     }
 
     #nav-links {
