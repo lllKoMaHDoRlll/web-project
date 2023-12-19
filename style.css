@@ -299,7 +299,6 @@ header {
     grid-template-columns: 1fr;
     width: 100%;
     justify-content: center;
-    justify-items: center; 
     column-gap: 2%;
     row-gap: .7rem; 
     margin: 0 auto;
@@ -989,10 +988,6 @@ footer > img {
     #company-experience {
         flex-direction: row;
         align-items: center;
-    }
-
-    #exp-image-outter {
-        width: 50%;
     }
     
     #exp-header-outter {
