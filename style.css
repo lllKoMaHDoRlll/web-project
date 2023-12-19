@@ -923,7 +923,7 @@ footer > img {
 }
 
 
-@media screen and (width >= 780px) {
+@media screen and (width >= 880px) {
     header {
         position: static;
         bottom: unset;
