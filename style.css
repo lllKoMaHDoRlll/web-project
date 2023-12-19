@@ -67,12 +67,16 @@ header {
     padding: 0 5%;
 }
 
+#nav-outter {
+    width: 50%;
+    margin-right: 15%;
+    margin-left: 2%;
+}
+
 #nav-links {
     list-style-type: none;
     display: none;
     justify-content: space-between;
-    width: 35dvw;
-    margin-right: 30dvw;
 }
 
 #nav-links > li::after {
